@@ -1,11 +1,13 @@
 const timeCounter = function () {
-    let timer = +document.getElementById("timer");
-    if (timer.textContent === 0) {
-        alert("Вы победили в конкурсе!")
+    const timer = document.getElementById("timer");
+    const time = +timer.textContent;
+    if (time === 0) {
+        alert("Вы победили в конкурсе!");
+        clearInterval(counterInterval)
     }
-    else timer.innerHTML -= 1;
+    else timer.textContent = (time - 1).toString();
 };
 
-setInterval(timeCounter, 1000)
+counterInterval = setInterval(timeCounter, 1000)
 
 
