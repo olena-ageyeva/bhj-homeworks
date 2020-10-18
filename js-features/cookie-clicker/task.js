@@ -1,8 +1,13 @@
 
-let numberOfClicks = +document.getElementById("clicker__counter");
-let cookie = document.getElementById("cookie")
+let numberOfClicks = document.getElementById("clicker__counter");
+const cookie = document.getElementById("cookie");
 cookie.onclick = function() {
-    numberOfClicks.textContent += 1;
+    let quantityOfClicks = +numberOfClicks.textContent
+    numberOfClicks.textContent = (quantityOfClicks + 1).toString();
+    if (quantityOfClicks%2 === 0) {
+        cookie.setAttribute('width','250')
+    }
+    else cookie.setAttribute('width','200')
 }
 
 
