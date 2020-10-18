@@ -1,4 +1,4 @@
-for(let i=0; i<=9; i++) {
+for(let i=1; i<=9; i++) {
     let chosenHole = document.getElementById(`hole${i}`);
     chosenHole.onclick = function() {
         let numberOfDeadMoles = +document.getElementById('dead').textContent;
@@ -7,18 +7,17 @@ for(let i=0; i<=9; i++) {
             document.getElementById('dead').textContent = (numberOfDeadMoles + 1).toString()
         } else {
             document.getElementById('lost').textContent = (numberOfWrongHoles + 1).toString()
-        }
-        ;
+        };
+        console.log(chosenHole)
         if (numberOfDeadMoles === 10) {
             alert('Вы победили!');
-            numberOfDeadMoles = 0;
-            numberOfWrongHoles = 0;
-
+            document.getElementById('dead').textContent = (0).toString();
+            document.getElementById('lost').textContent = (0).toString();
         }
         if (numberOfWrongHoles === 5) {
             alert('Вы проиграли!');
-            numberOfWrongHoles = 0;
-            numberOfDeadMoles = 0;
+            document.getElementById('dead').textContent = (0).toString();
+            document.getElementById('lost').textContent = (0).toString();
         }
     }
 }
