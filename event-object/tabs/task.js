@@ -1,8 +1,8 @@
 let tabHeaders = Array.from(document.getElementsByClassName('tab'));
-let tabContent = Array.from(document.getElementsByClassName('tab__contents'))
-let activeIndex = tabContent.findIndex(item => item.classList.contains('tab__content_active'))
-for(let i; i<tabHeaders.length; i++) {
+let tabContent = Array.from(document.getElementsByClassName('tab__content'));
+for(let i=0; i<tabHeaders.length; i++) {
 let clickOnItem = function() {
+    let activeIndex = tabContent.findIndex(item => item.classList.contains('tab__content_active'))
     tabHeaders[activeIndex].classList.remove('tab_active');
     tabContent[activeIndex].classList.remove('tab__content_active');
     tabHeaders[i].classList.add('tab_active');
