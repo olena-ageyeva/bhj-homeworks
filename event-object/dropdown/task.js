@@ -7,10 +7,10 @@ openingButton.addEventListener('click', openList);
 
 let listItems = Array.from(document.getElementsByClassName('dropdown__link'));
 for (let item of listItems) {
-    item.addEventListener('click', function() {
+    item.addEventListener('click', (event)=> {
         openingButton.textContent = item.textContent
         dropdownList.classList.remove('dropdown__list_active');
-        return false
+        event.preventDefault()
     })
 }
 
