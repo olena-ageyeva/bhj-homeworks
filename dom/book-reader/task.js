@@ -2,7 +2,7 @@ let fontSizeButtons = Array.from(document.getElementsByClassName('font-size'));
 let bookFontSize = document.getElementsByClassName('book')[0]
 for (let button of fontSizeButtons) {
     let activeButton = fontSizeButtons.findIndex(index=>index.classList.contains('font-size_active'))
-    button.addEventListener('click', (event)=> {
+    button.addEventListener('click', function(event) {
         fontSizeButtons[activeButton].classList.remove('font-size_active');
         this.classList.add('font-size_active');
         if (this.classList.contains('font-size_small')) {
