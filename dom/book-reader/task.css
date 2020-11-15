@@ -63,7 +63,8 @@ body {
   align-items: center;
 }
 
-.color {
+.color,
+.bg-color {
   width: 20px;
   height: 20px;
   display: inline-block;
@@ -72,7 +73,8 @@ body {
   box-sizing: border-box;
 }
 
-.color--active {
+.color--active,
+.bg-color--active {
   box-shadow: 0 0 5px white;
   border: 1px solid gray;
 }
