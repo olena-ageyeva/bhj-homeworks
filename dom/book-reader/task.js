@@ -1,5 +1,5 @@
 const contentId = "book";
-const controlId = `${contentId}_fs`;
+
 const content = document.getElementById(contentId);
 
 const createButtonGroup = ({ buttonClassName }) => {
@@ -8,14 +8,18 @@ const createButtonGroup = ({ buttonClassName }) => {
   for (const button of buttons) {
     button.addEventListener("click", (event) => {
       event.preventDefault();
-      const activeButton = document.querySelector(`.${buttonClassName}_active`);
+      const activeButton = document.querySelector(
+        `.${buttonClassName}--active`
+      );
 
-      activeButton.classList.remove(`${buttonClassName}_active`);
+      activeButton.classList.remove(`${buttonClassName}--active`);
 
-      button.classList.add(`${buttonClassName}_active`);
+      button.classList.add(`${buttonClassName}--active`);
       content.classList.replace(
-        `${controlId}-${activeButton.getAttribute("data-size")}`,
-        `${controlId}-${button.getAttribute("data-size")}`
+        `${contentId}_${buttonClassName}-${activeButton.getAttribute(
+          "data-size"
+        )}`,
+        `${contentId}_${buttonClassName}-${button.getAttribute("data-size")}`
       );
     });
   }
@@ -26,9 +30,9 @@ createButtonGroup({
 });
 
 createButtonGroup({
-  buttonClassName: ".controls .color",
+  buttonClassName: "color",
 });
 
 createButtonGroup({
-  buttonClassName: ".controls .background",
+  buttonClassName: "background",
 });
