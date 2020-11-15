@@ -17,9 +17,11 @@ const createButtonGroup = ({ buttonClassName }) => {
       button.classList.add(`${buttonClassName}--active`);
       content.classList.replace(
         `${contentId}_${buttonClassName}-${activeButton.getAttribute(
-          "data-size"
+          `data-${buttonClassName}`
         )}`,
-        `${contentId}_${buttonClassName}-${button.getAttribute("data-size")}`
+        `${contentId}_${buttonClassName}-${button.getAttribute(
+          `data-${buttonClassName}`
+        )}`
       );
     });
   }
@@ -34,5 +36,5 @@ createButtonGroup({
 });
 
 createButtonGroup({
-  buttonClassName: "background",
+  buttonClassName: "bg-color",
 });
