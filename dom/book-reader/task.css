@@ -2,23 +2,23 @@ body {
   margin: 0;
 }
 
-.bg_color_black {
+.bg-color_black {
   background: #000;
 }
 
-.bg_color_gray {
+.bg-color_gray {
   background: grey;
 }
 
-.bg_color_white {
+.bg-color_white {
   background: white;
 }
 
-.book_fs-big {
+.book_font-size-big {
   font-size: 20px;
 }
 
-.book_fs-small {
+.book_font-size-small {
   font-size: 12px;
 }
 
@@ -34,15 +34,15 @@ body {
   color: whitesmoke;
 }
 
-.book_bg-gray {
+.book_bg-color-gray {
   background: grey;
 }
 
-.book_bg-black {
+.book_bg-color-black {
   background: black;
 }
 
-.book_bg-white {
+.book_bg-color-white {
   background: white;
 }
 
@@ -54,7 +54,7 @@ body {
   justify-content: space-around;
   align-items: center;
   color: whitesmoke;
-  font-size: 16px;;
+  font-size: 16px;
 }
 
 .book__control {
@@ -63,7 +63,8 @@ body {
   align-items: center;
 }
 
-.color {
+.color,
+.bg-color {
   width: 20px;
   height: 20px;
   display: inline-block;
@@ -72,7 +73,8 @@ body {
   box-sizing: border-box;
 }
 
-.color_active {
+.color--active,
+.bg-color--active {
   box-shadow: 0 0 5px white;
   border: 1px solid gray;
 }
@@ -102,7 +104,7 @@ body {
   font-size: 20px;
 }
 
-.font-size_active {
+.font-size--active {
   border: 1px solid whitesmoke;
   border-radius: 50%;
 }
@@ -120,14 +122,14 @@ body {
   font-size: 28px;
 }
 
-.text_color_black {
+.color_black {
   background: #000;
 }
 
-.text_color_gray {
+.color_gray {
   background: grey;
 }
 
-.text_color_whitesmoke {
+.color_whitesmoke {
   background: whitesmoke;
 }
